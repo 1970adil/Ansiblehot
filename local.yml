@@ -16,17 +16,17 @@
      copy:
        src: files/wallpaper.png
        dest: /usr/share/backgrounds/ansible-wallpaper.png
-       owner: root
-       group: root
+       owner: kali
+       group: kali
 
    - name: set wallpaper
-     become_user: adil
+     become_user: kali
      dconf:
        key: "/org/gnome/desktop/background/picture-uri"
        value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
 
    - name: set wallpaper position
-     become_user: adil
+     become_user: kali
      dconf:
        key: "/org/gnome/desktop/background/picture-options"
        value: "'zoom'"  
